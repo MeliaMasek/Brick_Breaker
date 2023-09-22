@@ -1,4 +1,6 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class BallMovement : MonoBehaviour
 {
     public new Rigidbody rigidbody {get; private set;}
