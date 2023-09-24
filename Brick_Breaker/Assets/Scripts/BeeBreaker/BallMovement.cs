@@ -1,6 +1,8 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+//code borrowed and modified by Zigurous on youtube https://www.youtube.com/watch?v=RYG8UExRkhA
+//code borrowed and modified from ChatGPT
 public class BallMovement : MonoBehaviour
 {
     public new Rigidbody rigidbody {get; private set;}

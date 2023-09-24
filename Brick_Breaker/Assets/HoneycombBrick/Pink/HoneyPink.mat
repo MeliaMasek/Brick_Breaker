@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HoneyBrickOld
+  m_Name: HoneyPink
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a1d6fbe45006d114cbef311685934c49, type: 3}
+        m_Texture: {fileID: 2800000, guid: 03318aa86e716b946af96d376ca52989, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,11 +42,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: a12cde75e3cb5264bbaf0d45f1b25a8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 673420b95de7d6b4ca6c364d5fc866ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e19e8f74c89a2414696eb9fa3cf16f74, type: 3}
+        m_Texture: {fileID: 2800000, guid: dda0ca6fe9d9bb8419ba8688b35bcb1b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

@@ -1,6 +1,8 @@
 using UnityEngine;
 
+//code borrowed and modified by Zigurous on youtube https://www.youtube.com/watch?v=RYG8UExRkhA
 public class PaddleMovement : MonoBehaviour
+
 {
     public new Rigidbody rigidbody {get; private set;}
     public Vector2 direction {get; private set;}
