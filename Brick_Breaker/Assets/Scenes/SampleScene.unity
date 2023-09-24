@@ -4117,7 +4117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708847378812238768, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
       propertyPath: m_Name
-      value: BeeBallUVTEST
+      value: BeeBall
       objectReference: {fileID: 0}
     - target: {fileID: 2088785186941935882, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
       propertyPath: m_RootOrder

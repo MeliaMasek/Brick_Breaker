@@ -43,7 +43,7 @@ public class BrickStates : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "BallMovement" )
+        if (collision.gameObject.name == "BeeBall" )
         {
             Hit();
         }
