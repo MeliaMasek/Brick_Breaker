@@ -48,7 +48,7 @@ public class PaddleMovement : MonoBehaviour
             Vector2 contactPoint = collision.GetContact(0).point;
 
             float offset = paddlePosition.x - contactPoint.x;
-            float width = collision.collider.bounds.size.x / 2;
+            float width = collision.collider.bounds.size.x / 4;
 
             float currentAngle = Vector2.SignedAngle(Vector2.up, ball.rigidbody.velocity);
             float bounceAngle = (offset / width) * this.maxBounceAngle;

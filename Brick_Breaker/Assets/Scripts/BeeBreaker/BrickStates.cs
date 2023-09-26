@@ -6,6 +6,8 @@ public class BrickStates : MonoBehaviour
     public int health {get; private set;}
     public Material[] states;
     public bool unbreakable;
+    public GameObject prefab;
+    public float offset = .5f;
     public MeshRenderer meshRenderer {get; private set;}
 
     private void Awake()
@@ -17,8 +19,10 @@ public class BrickStates : MonoBehaviour
     {
         if (!this.unbreakable)
         {
-            this.health = this.states.Length;
-            this.meshRenderer.material = this.states[this.health -1];
+           {
+               this.health = this.states.Length;
+               this.meshRenderer.material = this.states[this.health - 1];
+           }
         }
     }
 
