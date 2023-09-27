@@ -8,6 +8,7 @@ public class PaddleMovement : MonoBehaviour
     public Vector2 direction {get; private set;}
     public float speed = 30f;
     public float maxBounceAngle = 75f;
+    private Vector3 startPos;
 
     private void Awake()
     {
@@ -58,5 +59,11 @@ public class PaddleMovement : MonoBehaviour
 
             ball.rigidbody.velocity = rotation * Vector2.up * ball.rigidbody.velocity.magnitude;
         }
+    }
+    
+    public void ResetToZero()
+    {
+        startPos = new Vector3(.21f, 1.57f, 0f);
+        transform.position = startPos;
     }
 }
