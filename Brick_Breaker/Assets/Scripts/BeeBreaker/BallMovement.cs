@@ -15,7 +15,7 @@ public class BallMovement : MonoBehaviour
     
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 1f);
+        Invoke(nameof(SetRandomTrajectory), 5f);
     }
 
     private void Update()
@@ -31,8 +31,14 @@ public class BallMovement : MonoBehaviour
         }
     }
 
-    private void SetRandomTrajectory()
+    public void SetRandomTrajectory()
     {
+        // Generate a random 2D vector within a unit circle
+        //Vector2 randomDirection = Random.insideUnitCircle.normalized;
+    
+        // Apply the initial force to the ball
+        //this.rigidbody.AddForce(randomDirection * this.speed);
+        
         Vector2 force = Vector2.zero;
         force.x = Random.Range(-1f, 1f);
         force.y = -1f;
@@ -42,7 +48,7 @@ public class BallMovement : MonoBehaviour
     
     public void ResetToZero()
     {
-        startPos = new Vector3(0f, 2.5f, 0f);
-        transform.position = startPos;
+        //startPos = new Vector3(0f, 3f, 0f);
+        //transform.position = startPos;
     }
 }

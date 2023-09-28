@@ -1,6 +1,8 @@
 using UnityEngine;
 
 //code borrowed and modified by Zigurous on youtube https://www.youtube.com/watch?v=RYG8UExRkhA
+//code borrowed and modified from ChatGPT
+
 public class BrickStates : MonoBehaviour
 {
     public int health {get; private set;}
@@ -8,6 +10,10 @@ public class BrickStates : MonoBehaviour
     public bool unbreakable;
     public GameObject prefab;
     public float offset = .5f;
+    
+    public int rows = 6;
+    public int columns = 3;
+    public Vector3 objectSpacing = new Vector3(1.2f, 0.5f, 1.2f);
     public MeshRenderer meshRenderer {get; private set;}
 
     private void Awake()
@@ -19,10 +25,10 @@ public class BrickStates : MonoBehaviour
     {
         if (!this.unbreakable)
         {
-           {
-               this.health = this.states.Length;
-               this.meshRenderer.material = this.states[this.health - 1];
-           }
+            {
+                this.health = this.states.Length;
+                this.meshRenderer.material = this.states[this.health - 1];
+            }
         }
     }
 
@@ -41,15 +47,16 @@ public class BrickStates : MonoBehaviour
         }
         else
         {
-            this.meshRenderer.material = this.states[this.health -1];
+            this.meshRenderer.material = this.states[this.health - 1];
         }
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "BeeBall" )
+        if (collision.gameObject.name == "BeeBall")
         {
             Hit();
         }
     }
 }
+
