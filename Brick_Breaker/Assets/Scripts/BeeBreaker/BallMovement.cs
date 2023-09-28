@@ -15,7 +15,7 @@ public class BallMovement : MonoBehaviour
     
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 5f);
+        Invoke(nameof(SetRandomTrajectory), 3f);
     }
 
     private void Update()
@@ -33,7 +33,7 @@ public class BallMovement : MonoBehaviour
 
     public void SetRandomTrajectory()
     {
-        // Generate a random 2D vector within a unit circle
+        //Generate a random 2D vector within a unit circle
         //Vector2 randomDirection = Random.insideUnitCircle.normalized;
     
         // Apply the initial force to the ball
@@ -48,7 +48,7 @@ public class BallMovement : MonoBehaviour
     
     public void ResetToZero()
     {
-        //startPos = new Vector3(0f, 3f, 0f);
-        //transform.position = startPos;
+        startPos = new Vector3(0f, 3f, 0f);
+        transform.position = startPos;
     }
 }

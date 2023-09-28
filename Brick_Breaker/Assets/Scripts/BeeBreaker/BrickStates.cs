@@ -10,10 +10,6 @@ public class BrickStates : MonoBehaviour
     public bool unbreakable;
     public GameObject prefab;
     public float offset = .5f;
-    
-    public int rows = 6;
-    public int columns = 3;
-    public Vector3 objectSpacing = new Vector3(1.2f, 0.5f, 1.2f);
     public MeshRenderer meshRenderer {get; private set;}
 
     private void Awake()
