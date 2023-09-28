@@ -63,7 +63,7 @@ public class PaddleMovement : MonoBehaviour
     
     public void ResetToZero()
     {
-        startPos = new Vector3(.21f, 1.57f, 0f);
+        startPos = new Vector3(0f, 1.57f, 0f);
         transform.position = startPos;
     }
 }
