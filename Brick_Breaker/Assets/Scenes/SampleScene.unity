@@ -4213,13 +4213,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: states.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: aa5c4bfd7042bc54ea3b073512939cb9, type: 2}
+      objectReference: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: states.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: states.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    - target: {fileID: -3270874674630134040, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: states.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    - target: {fileID: 6742135400986262213, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8532822840014006334, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_Name
       value: HoneyBrick
@@ -4230,11 +4258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016625946084487812, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.072175
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 9016625946084487812, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.429635
+      value: 8.63
       objectReference: {fileID: 0}
     - target: {fileID: 9016625946084487812, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4290,9 +4318,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rowDis: 1
   rowNum: 5
-  colDis: 1
-  colNum: 5
+  colDis: 0.65
+  colNum: 6
   prefab: {fileID: 8532822840014006334, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+  spawnLocation: {x: -1.75, y: 4, z: 0}
+  colorHealthPairs:
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: b4eea2233eefccd4b903c63d922518ec, type: 2}
+    health: 4
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: e6bf885da90a77e4c860563d47086a9d, type: 2}
+    health: 3
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: 5ea2519398ce78542b226f84dc0b56a3, type: 2}
+    health: 2
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    health: 1
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
+  - color: {fileID: 2100000, guid: 970b0f22b0d2969408e4ce3e919ed74e, type: 2}
+    health: 0
 --- !u!1 &1119714900
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BrickStates : MonoBehaviour
 {
-    public int health {get; private set;}
+    public int health {get; internal set;}
     public Material[] states;
     public bool unbreakable;
     public MeshRenderer meshRenderer {get; private set;}
