@@ -18,7 +18,7 @@ public class BallMovement : MonoBehaviour
         Invoke(nameof(SetRandomTrajectory), 3f);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Limit the velocity to maintain a constant speed.
         Vector3 currentVelocity = rigidbody.velocity;
@@ -39,8 +39,8 @@ public class BallMovement : MonoBehaviour
         // Apply the initial force to the ball
         //this.rigidbody.AddForce(randomDirection * this.speed);
         
-        Vector2 force = Vector2.zero;
-        force.x = Random.Range(-1f, 1f);
+        Vector3 force = Vector3.zero;
+        force.x = Random.Range(0f, 0f);
         force.y = -1f;
         
         this.rigidbody.AddForce(force.normalized * this.speed);

@@ -46,7 +46,7 @@ public class PaddleMovement : MonoBehaviour
         if (ball != null)
         {
             Vector3 paddlePosition = this.transform.position;
-            Vector2 contactPoint = collision.GetContact(0).point;
+            Vector3 contactPoint = collision.GetContact(0).point;
 
             float offset = paddlePosition.x - contactPoint.x;
             float width = collision.collider.bounds.size.x / 2;
@@ -57,7 +57,7 @@ public class PaddleMovement : MonoBehaviour
 
             Quaternion rotation = Quaternion.AngleAxis(newAngle, Vector3.forward);
 
-            ball.rigidbody.velocity = rotation * Vector2.up * ball.rigidbody.velocity.magnitude;
+            ball.rigidbody.velocity = rotation * Vector3.up * ball.rigidbody.velocity.magnitude;
         }
     }
     
@@ -65,6 +65,5 @@ public class PaddleMovement : MonoBehaviour
     {
         startPos = new Vector3(0f, 1.55f, 0f);
         transform.position = startPos;
-        
     }
 }

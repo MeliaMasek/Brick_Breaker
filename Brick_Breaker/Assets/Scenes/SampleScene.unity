@@ -3375,7 +3375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &887089324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3893,7 +3893,7 @@ GameObject:
   - component: {fileID: 1008944959}
   - component: {fileID: 1008944965}
   - component: {fileID: 1008944964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Paddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3990,7 +3990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a91330f7d89ad43891d59ca453e5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 12
   maxBounceAngle: 75
 --- !u!54 &1008944965
 Rigidbody:
@@ -4005,7 +4005,7 @@ Rigidbody:
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 124
   m_CollisionDetection: 2
 --- !u!1 &1011060617
@@ -5073,6 +5073,14 @@ PrefabInstance:
       propertyPath: states.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: cdbec7975c8d8f642919008785835db2, type: 2}
+    - target: {fileID: -2496433075354013029, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f5f6d313244a19b41a4a05a712ca793f, type: 2}
+    - target: {fileID: -2496433075354013029, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1364664062177662024, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -5081,6 +5089,10 @@ PrefabInstance:
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: UpdateLabel
       objectReference: {fileID: 0}
+    - target: {fileID: 566227103672062008, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f5f6d313244a19b41a4a05a712ca793f, type: 2}
     - target: {fileID: 2675037791745795709, guid: a3ae32e650bf17f468d6ed7191c4bdc4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6325,7 +6337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1738526910
 Transform:
   m_ObjectHideFlags: 0
@@ -6334,8 +6346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738526909}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2, y: 4.320052, z: 0.45}
-  m_LocalScale: {x: 0.85858, y: 9.80391, z: 9.699518}
+  m_LocalPosition: {x: -0.2, y: 4.320052, z: 0.4}
+  m_LocalScale: {x: 0.47865835, y: 9.80391, z: 9.699518}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1868063133}
@@ -7039,48 +7051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953168d342347264ea0110916b63db5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1846770242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846770237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e41185e5ef32e4647a785cf3203f6bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canRun: 1
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  startCountEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1846770238}
-        m_TargetAssemblyTypeName: BallMovement, Assembly-CSharp
-        m_MethodName: SetRandomTrajectory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  repeatCountEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endCountEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  repeatUntilFalseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  counterNum: {fileID: 11400000, guid: 7a30ee98877748f4bad5c9aacdf59ee9, type: 2}
-  seconds: 3
 --- !u!1 &1868063132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7512,6 +7482,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1008944964}
+        m_TargetAssemblyTypeName: PaddleMovement, Assembly-CSharp
+        m_MethodName: ResetToZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1846770238}
         m_TargetAssemblyTypeName: BallMovement, Assembly-CSharp
         m_MethodName: ResetToZero
@@ -7528,18 +7510,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1008944964}
-        m_TargetAssemblyTypeName: PaddleMovement, Assembly-CSharp
-        m_MethodName: ResetToZero
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7756,6 +7726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0bf87d35dd384a44b96709e3b8b9419, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a0bf87d35dd384a44b96709e3b8b9419, type: 3}
@@ -7921,12 +7895,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3512826375265913082, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
       propertyPath: m_CollisionDetection
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4906143000857090791, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f2d7f228f2414c84ea761c1a1f453f73, type: 2}
+    - target: {fileID: 8573714128522966058, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573714128522966058, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a9496327bf7fd5340942733adacdc02f, type: 3}
