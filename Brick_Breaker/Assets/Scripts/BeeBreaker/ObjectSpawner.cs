@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 //code borrowed and modified from ChatGPT
 [Serializable]
@@ -19,9 +18,30 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject prefab;
     public Vector3 spawnLocation;
     public List<ColorHealthPair> colorHealthPairs;
-    private List<ColorHealthPair> availablePairs; // Keep track of available pairs
+    private List<ColorHealthPair> availablePairs;
+    private List<GameObject> spawnedBricks = new List<GameObject>();
 
     void Start()
+    {
+        SpawnBricks();
+    }
+
+    public void ResetBricks()
+    {
+        // Destroy all previously spawned bricks
+        foreach (var brick in spawnedBricks)
+        {
+            Destroy(brick);
+        }
+
+        // Clear the list of spawned bricks
+        spawnedBricks.Clear();
+
+        // Spawn new bricks (you can call this from a button click or other events)
+        SpawnBricks();
+    }
+    
+    private void SpawnBricks()
     {
         // Initialize the list of available pairs to be a copy of the original colorHealthPairs
         availablePairs = new List<ColorHealthPair>(colorHealthPairs);
@@ -34,6 +54,7 @@ public class ObjectSpawner : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(0, 90, 0);
 
                 GameObject brick = Instantiate(prefab, position, rotation);
+                spawnedBricks.Add(brick);
                 BrickStates brickStates = brick.GetComponent<BrickStates>();
 
                 if (brickStates != null && availablePairs.Count > 0)
@@ -49,9 +70,6 @@ public class ObjectSpawner : MonoBehaviour
 
                     // Remove the selected pair from the list of available pairs
                     availablePairs.RemoveAt(randomIndex);
-                    
-                    //Debug.Log("Available Pairs Count: " + availablePairs.Count);
-                    //Debug.Log("Selected Pair: " + selectedPair.color + ", Health: " + selectedPair.health);
                 }
             }
         }
