@@ -1,11 +1,21 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [CreateAssetMenu]
 public class GameInputData : ScriptableObject
 {
-    public PaddleHold gameinput;
-    public void OnEnable()
+    // Reference to the Input Action Map
+    public InputActionMap inputActionMap;
+
+    private void OnEnable()
     {
-        //game
+        // Initialize the Input Action Map
+        inputActionMap = new InputActionMap("TouchActionMap");
+
+        // Add the "Touch" action to the Input Action Map
+        inputActionMap.AddAction("Touch", binding: "<Touchscreen>/touch");
+
+        // Enable the Input Action Map
+        inputActionMap.Enable();
     }
 }

@@ -24,13 +24,13 @@ public partial class @PaddleHold : IInputActionCollection2, IDisposable
     ""name"": ""PaddleHold"",
     ""maps"": [
         {
-            ""name"": ""Paddle"",
-            ""id"": ""08116134-73d2-4993-acd8-14e24940032f"",
+            ""name"": ""TouchActionMap"",
+            ""id"": ""c323b3ee-bd4b-47c6-bb01-e275a5e15e0a"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""9d94f493-980d-49a6-8d00-1ebfb0f00362"",
+                    ""name"": ""Touch"",
+                    ""type"": ""Value"",
+                    ""id"": ""0d84472c-c8d3-4461-a409-fd19f4112526"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,114 +39,15 @@ public partial class @PaddleHold : IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""WASD"",
-                    ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
-                    ""path"": ""Dpad"",
+                    ""name"": """",
+                    ""id"": ""755e8098-cbdd-41a5-b302-45ba96bfce19"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
+                    ""action"": ""Touch"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""d2581a9b-1d11-4566-b27d-b92aff5fabbc"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""2e46982e-44cc-431b-9f0b-c11910bf467a"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""fcfe95b8-67b9-4526-84b5-5d0bc98d6400"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""77bff152-3580-4b21-b6de-dcd0c7e41164"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""22145948-be1b-4f32-a847-92ec249b8b5b"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""d869fb6f-f24e-4e7f-aae4-893102caa280"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""8de8ed2e-4a5b-4537-9aa7-d642655e3805"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""740b50f9-9cb1-4134-bf88-84a018a13bb3"",
-                    ""path"": ""<Touchscreen>/primaryTouch/delta/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""9d59e7b7-2241-4815-a1a8-4735e909cabb"",
-                    ""path"": ""<Touchscreen>/primaryTouch/delta/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -214,9 +115,9 @@ public partial class @PaddleHold : IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // Paddle
-        m_Paddle = asset.FindActionMap("Paddle", throwIfNotFound: true);
-        m_Paddle_Move = m_Paddle.FindAction("Move", throwIfNotFound: true);
+        // TouchActionMap
+        m_TouchActionMap = asset.FindActionMap("TouchActionMap", throwIfNotFound: true);
+        m_TouchActionMap_Touch = m_TouchActionMap.FindAction("Touch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,38 +174,38 @@ public partial class @PaddleHold : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Paddle
-    private readonly InputActionMap m_Paddle;
-    private IPaddleActions m_PaddleActionsCallbackInterface;
-    private readonly InputAction m_Paddle_Move;
-    public struct PaddleActions
+    // TouchActionMap
+    private readonly InputActionMap m_TouchActionMap;
+    private ITouchActionMapActions m_TouchActionMapActionsCallbackInterface;
+    private readonly InputAction m_TouchActionMap_Touch;
+    public struct TouchActionMapActions
     {
         private @PaddleHold m_Wrapper;
-        public PaddleActions(@PaddleHold wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Paddle_Move;
-        public InputActionMap Get() { return m_Wrapper.m_Paddle; }
+        public TouchActionMapActions(@PaddleHold wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Touch => m_Wrapper.m_TouchActionMap_Touch;
+        public InputActionMap Get() { return m_Wrapper.m_TouchActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PaddleActions set) { return set.Get(); }
-        public void SetCallbacks(IPaddleActions instance)
+        public static implicit operator InputActionMap(TouchActionMapActions set) { return set.Get(); }
+        public void SetCallbacks(ITouchActionMapActions instance)
         {
-            if (m_Wrapper.m_PaddleActionsCallbackInterface != null)
+            if (m_Wrapper.m_TouchActionMapActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_PaddleActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_PaddleActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_PaddleActionsCallbackInterface.OnMove;
+                @Touch.started -= m_Wrapper.m_TouchActionMapActionsCallbackInterface.OnTouch;
+                @Touch.performed -= m_Wrapper.m_TouchActionMapActionsCallbackInterface.OnTouch;
+                @Touch.canceled -= m_Wrapper.m_TouchActionMapActionsCallbackInterface.OnTouch;
             }
-            m_Wrapper.m_PaddleActionsCallbackInterface = instance;
+            m_Wrapper.m_TouchActionMapActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Move.started += instance.OnMove;
-                @Move.performed += instance.OnMove;
-                @Move.canceled += instance.OnMove;
+                @Touch.started += instance.OnTouch;
+                @Touch.performed += instance.OnTouch;
+                @Touch.canceled += instance.OnTouch;
             }
         }
     }
-    public PaddleActions @Paddle => new PaddleActions(this);
+    public TouchActionMapActions @TouchActionMap => new TouchActionMapActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -350,8 +251,8 @@ public partial class @PaddleHold : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_XRSchemeIndex];
         }
     }
-    public interface IPaddleActions
+    public interface ITouchActionMapActions
     {
-        void OnMove(InputAction.CallbackContext context);
+        void OnTouch(InputAction.CallbackContext context);
     }
 }
