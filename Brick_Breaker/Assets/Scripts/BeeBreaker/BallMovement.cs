@@ -15,7 +15,7 @@ public class BallMovement : MonoBehaviour
     
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 3f);
+        //Invoke(nameof(SetRandomTrajectory), 3f);
     }
 
     private void FixedUpdate()
@@ -29,6 +29,11 @@ public class BallMovement : MonoBehaviour
             Vector3 newVelocity = currentVelocity.normalized * speed;
             rigidbody.velocity = newVelocity;
         }
+    }
+
+    public void StartGame()
+    {
+        SetRandomTrajectory();
     }
 
     public void SetRandomTrajectory()
