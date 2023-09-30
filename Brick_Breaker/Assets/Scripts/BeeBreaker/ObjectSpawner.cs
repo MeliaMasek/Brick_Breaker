@@ -18,7 +18,6 @@ public class ObjectSpawner : MonoBehaviour
     public int colNum;
     public GameObject prefab;
     public Vector3 spawnLocation;
-    //public Material[] brickMaterials;
     public List<ColorHealthPair> colorHealthPairs;
     private List<ColorHealthPair> availablePairs; // Keep track of available pairs
 

@@ -26,7 +26,7 @@ public class BrickStates : MonoBehaviour
         }
     }
 
-    private void Hit()
+    public void Hit()
     {
         if (this.unbreakable)
         {
@@ -42,6 +42,7 @@ public class BrickStates : MonoBehaviour
         else
         {
             this.meshRenderer.material = this.states[this.health - 1];
+            Debug.Log("Health: " + this.health); // Add this line to check health changes
         }
     }
 
