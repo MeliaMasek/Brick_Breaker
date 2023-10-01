@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //code borrowed and modified from ChatGPT
 [Serializable]
@@ -20,6 +21,9 @@ public class ObjectSpawner : MonoBehaviour
     public List<ColorHealthPair> colorHealthPairs;
     private List<ColorHealthPair> availablePairs;
     private List<GameObject> spawnedBricks = new List<GameObject>();
+    
+    public IntData health;
+    public Text gamewonText; // Reference to the UI Text component to display the game over message
 
     void Start()
     {
@@ -72,6 +76,20 @@ public class ObjectSpawner : MonoBehaviour
                     availablePairs.RemoveAt(randomIndex);
                 }
             }
+        }
+    }
+    
+    public void GameWon()
+    {
+        // Check if all bricks are gone to trigger game won
+        if (spawnedBricks.Count == 0)
+        {
+            // Enable the game won text
+            gamewonText.enabled = true;
+        }
+        else
+        {
+            gamewonText.enabled = false;
         }
     }
 }

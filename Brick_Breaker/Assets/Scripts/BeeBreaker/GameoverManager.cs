@@ -1,29 +1,23 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameoverManager : MonoBehaviour
 {
-    public GameObject gameOverPanel;
-    public IntData Health;
+    public IntData health;
+    public Text gameoverText; // Reference to the UI Text component to display the game over message
 
-    private void Start()
+    public void Gameover()
     {
-        //playerHealth.value = playerHealth.value;
-        //gameOverPanel.SetActive(false);
-    }
-
-    public void ReduceHealth(int amount)
-    {
-        Health.value -= amount;
-
-        if (Health.value <= 0)
+        // Check if health is less than or equal to zero to trigger game over
+        if (health.value <= 0)
         {
-            Health.value = 0;
-            GameOver();
+            // Enable the game over text
+            gameoverText.enabled = true;
         }
-    }
-
-    private void GameOver()
-    {
-        gameOverPanel.SetActive(true);
+        else
+        {
+            // Disable the game over text if health is greater than zero
+            gameoverText.enabled = false;
+        }
     }
 }
