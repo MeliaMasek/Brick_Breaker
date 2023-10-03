@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OnHoldBehavoir : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class OnHoldBehavoir : MonoBehaviour
+    //IPointerDownHandler, IPointerUpHandler
 {
     private bool isHolding;
     public float holdDuration = 2.0f; // Adjust the duration as needed
@@ -21,17 +22,30 @@ public class OnHoldBehavoir : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    /*public void OnPointerDown(PointerEventData eventData)
     {
         // The button is pressed, start holding
         isHolding = true;
         holdStartTime = Time.time;
     }
-
-    public void OnPointerUp(PointerEventData eventData)
+    */
+    public void OnMouseDown()
+    {
+        // The button is pressed, start holding
+        isHolding = true;
+        holdStartTime = Time.time;
+    }
+    /*public void OnPointerUp(PointerEventData eventData)
     {
         // The button is released, stop holding and stop moving
         isHolding = false;
         arrowMovement.StopMovingLeft(); // Stop moving left
+    }
+    */
+    public void OnMouseUp()
+    {
+        // The button is pressed, start holding
+        isHolding = true;
+        holdStartTime = Time.time;
     }
 }
